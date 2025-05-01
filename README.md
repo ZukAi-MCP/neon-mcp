@@ -6,7 +6,7 @@ This MCP server allows agents (such as Cursor) to interface with the [Neon REST 
 
 It's still under development, I will be adding more tools as I find myself needing them.
 
-## Installation
+## Installation 
 
 1. Run the automated install script to clone this MCP server and deploy it to your Cloudflare account:
 

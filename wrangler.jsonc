@@ -3,7 +3,7 @@
 	"name": "neon-mcp",
 	"main": "src/index.ts",
 	"compatibility_date": "2025-02-22",
-	"compatibility_flags": ["nodejs_compat"],
+	"compatibility_flags": ["nodejs_compat"], 
 	// "vars": {
 	// 	"NEON_API_KEY": "NEON_API_KEY"
 	// },

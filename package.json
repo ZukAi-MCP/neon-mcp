@@ -1,0 +1,17 @@
+{
+	"name": "neon-mcp",
+	"scripts": {
+		"dev": "bun check && wrangler dev",
+		"deploy": "workers-mcp docgen src/index.ts && bun check && wrangler deploy --minify",
+		"check": "bunx biome check --write ."
+	},
+	"dependencies": {
+		"@neondatabase/api-client": "^1.12.0",
+		"workers-mcp": "^0.0.13"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^1.9.4",
+		"@cloudflare/workers-types": "^4.20250109.0",
+		"wrangler": "^3.101.0"
+	}
+}

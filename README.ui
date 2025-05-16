@@ -1,0 +1,37 @@
+# UI-specific installation notes
+
+Install ancient node via ``n``:
+
+    git clone https://github.com/tj/n n
+    N_PREFIX="$(pwd)" ./n/bin/n 0.10.48
+
+Install blockchain browser:
+
+    ./n/versions/node/0.10.48/bin/npm install
+
+Start in foreground with:
+
+    INSIGHT_NETWORK=livenet \
+        BITCOIND_USER=smileycoinrpc \
+        BITCOIND_PASS=pwdpwdpwd \
+        BITCOIND_HOST=127.0.0.1 \
+        BITCOIND_PORT=14242 \
+        ./n/versions/node/0.10.48/bin/npm start
+
+Configure the instance by writing a .local-conf:
+
+    cat <<EOF > .local-conf
+    PROJECT_MODE="production"
+    WWW_SERVER_NAME="blocks.smileyco.in"
+    WWW_CERT_PATH="/etc/nginx/ssl"
+
+    BITCOIND_USER=smileycoinrpc
+    BITCOIND_PASS=(RPC password)
+    BITCOIND_HOST=127.0.0.1
+    BITCOIND_PORT=14242
+    BITCOIND_DATADIR=(Path to .smileycoin)
+    EOF
+
+Install:
+
+    sudo ./install.sh
